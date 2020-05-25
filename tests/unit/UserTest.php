@@ -4,7 +4,7 @@ use PHPUnit\Framework\TestCase;
 
 use App\Models\User;
 
-class Sample extends TestCase
+class UserTest extends TestCase
 {
     public function testThatWeCanGetTheFirstName()
     {
