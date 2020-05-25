@@ -55,7 +55,7 @@ class UserTest extends TestCase
        $user = new User();
        $user->setFirstName('Mateusz');
        $user->setLastName('Piotr');
-       $user->setEmail('mateusz.lichwiarz@gmail.com');
+       $user->setEmail('Mateusz.lichwiarz@gmail.com');
 
        $emailVariables = $user->getEmailVariables();
 
