@@ -50,6 +50,21 @@ class UserTest extends TestCase
         $this->assertEquals($email, 'mateusz.lichwiarz@gmail.com');
     }
 
+    public function testEmailVariablesContainCorrectValues()
+    {
+       $user = new User();
+       $user->setFirstName('Mateusz');
+       $user->setLastName('Piotr');
+       $user->setEmail('mateusz.lichwiarz@gmail.com');
 
+       $emailVariables = $user->getEmailVariables();
+
+       $this->assertArrayHasKey('full_name', $emailVariables);
+       $this->assertArrayHasKey('email', $emailVariables);
+
+       $this->assertEquals($emailVariables['full_name'], 'Mateusz Piotr');
+       $this->assertEquals($emailVariables['email'], 'mateusz.lichwiarz@gmail.com');
+
+    }
 
 }
