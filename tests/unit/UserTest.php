@@ -43,11 +43,13 @@ class UserTest extends TestCase
     public function testEmailAdressCanBeSet()
     {
         $user = new User();
-        $user->setEmail('mateusz.lichwiarz@gmail.com');
+        $user->setEmail('Mateusz.lichwiarz@gmail.com');
         
         $email = $user->getEmail();
 
-        $this->assertEquals($email, 'Mateusz.lichwiarz@gmail.com');
+        $this->assertEquals($email, 'mateusz.lichwiarz@gmail.com');
     }
+
+
 
 }

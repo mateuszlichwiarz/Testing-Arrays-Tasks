@@ -6,6 +6,7 @@ class User
 {
     private $first_name;
     private $last_name;
+    private $email;
 
     public function setFirstName($firstName)
     {
@@ -34,6 +35,16 @@ class User
 
         $full_name = $first_name.' '.$last_name;
         return $full_name;
+    }
+
+    public function setEmail($email)
+    {
+        $this->email = strtolower($email);
+    }
+
+    public function getEmail()
+    {
+        return $this->email;
     }
 
     static public function getTrimmedString($string)
