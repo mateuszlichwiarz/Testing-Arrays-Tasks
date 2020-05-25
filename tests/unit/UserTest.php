@@ -39,4 +39,15 @@ class UserTest extends TestCase
 
         $this->assertEquals($trimmed_string, "Mateusz");
     }
+
+    public function testEmailAdressCanBeSet()
+    {
+        $user = new User();
+        $user->setEmail('mateusz.lichwiarz@gmail.com');
+        
+        $email = $user->getEmail();
+
+        $this->assertEquals($email, 'Mateusz.lichwiarz@gmail.com');
+    }
+
 }
