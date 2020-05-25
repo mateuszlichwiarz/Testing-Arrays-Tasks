@@ -35,4 +35,10 @@ class User
         $full_name = $first_name.' '.$last_name;
         return $full_name;
     }
+
+    static public function getTrimmedString($string)
+    {
+        $trimmed_string = trim($string);
+        return $trimmed_string;
+    }
 }
