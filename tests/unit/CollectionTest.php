@@ -89,6 +89,6 @@ class CollectionTest extends TestCase
             ['username' => 'piotr'],
         ]);
 
-        $this->assertEquals('[{"username": "mateusz"}, {"username": "piotr"}]', $collection->toJson());
+        $this->assertEquals('[{"username":"mateusz"},{"username":"piotr"}]', $collection->toJson());
     }
 }
