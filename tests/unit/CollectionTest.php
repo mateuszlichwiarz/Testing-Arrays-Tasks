@@ -92,4 +92,18 @@ class CollectionTest extends TestCase
         $this->assertIsString($collection->toJson());
         $this->assertEquals('[{"username":"mateusz"},{"username":"piotr"}]', $collection->toJson());
     }
+
+    /** @test */
+    public function json_encoding_a_collection_object_returns_json()
+    {
+        $collection = new Collection([
+            ['username' => 'mateusz'],
+            ['username' => 'piotr'],
+        ]);
+
+        $encoded = json_encode($collection);
+
+        $this->assertIsString($encoded);
+        $this->assertEquals('[{"username":"mateusz"},{"username":"piotr"}]', $encoded);
+    }
 }
