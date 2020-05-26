@@ -38,4 +38,8 @@ class Collection implements IteratorAggregate
         return new ArrayIterator($this->items);
     }
 
+    public function toJson()
+    {
+        return json_encode($this->items);
+    }
 }
