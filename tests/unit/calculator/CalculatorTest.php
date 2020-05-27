@@ -77,4 +77,24 @@ class CalculatorTest extends TestCase
 
         $this->assertEquals(15, $calculator->calculate());
     }
+
+    /** @test */
+    public function calculate_method_returs_multiple_results()
+    {
+        $addition = new Addition();
+        $addition->setOperands([5, 10]);
+
+        $division = new Division();
+        $division->setOperands([10, 5]);
+
+        $calculator = new Calculator();
+        $calculator->setOperations($addition, $division);
+
+        // [15,2]
+
+        $this->assertIsArray($calculator->calculate());
+        $this->assertEquals(15, $calculator->calculate()[0]);
+        $this->assertEquals(2, $calculator->calculate()[1]);
+
+    }
 }
