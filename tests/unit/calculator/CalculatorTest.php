@@ -19,4 +19,19 @@ class CalculatorTest extends TestCase
 
         $this->assertCount(1, $calculator->getOperations());
     }
+
+    /** @test */
+    public function can_set_multiple_operations()
+    {
+        $addition1 = new Addition();
+        $addition1->setOperands([5, 10]);
+
+        $addition2 = new Addition();
+        $addition2->setOperands([2, 2]);
+
+        $calculator = new Calculator();
+        $calculator->setOperations([$addition1, $addition2]);
+
+        $this->assertCount(2, $calculator->getOperations());
+    }
 }
