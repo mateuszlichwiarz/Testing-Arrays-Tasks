@@ -53,4 +53,16 @@ class CalculatorTest extends TestCase
 
         $this->assertCount(3, $calculator->getOperations());
     }
+
+    /** @test */
+    public function operations_are_ignored_if_not_instance_of_operation_interface()
+    {
+        $addition = new Addition();
+        $addition->setOperands([5, 10]);
+
+        $calculator = new Calculator();
+        $calculator->setOperations([$addition, 'cats', 'dogs']);
+
+        $this->assertCount(2, $calculator->getOperations());
+    }
 }
