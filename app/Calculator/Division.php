@@ -13,18 +13,12 @@ class Division extends OperationAbstract implements OperationInterface
             throw new NoOperandsException;
         }
 
-        $result = 0;
-
-        foreach($this->operands as $index => $operand)
-        {
-            if($index === 0)
-            {
-                $result = $operand;
-                continue;
+        return array_reduce($this->operands, function($a, $b){
+            if($a !== null && $b !== null) {
+                return $a/$b;
             }
-
-            $result = $result /$operand;
-        }
-        return $result;
+            return $b;
+            
+        }, null);
     }
 }
