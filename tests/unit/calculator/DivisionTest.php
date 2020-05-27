@@ -3,6 +3,7 @@
 use PHPUnit\Framework\TestCase;
 
 use App\Calculator\Division;
+use App\Calculator\Exceptions\NoOperandsException;
 
 class DivisionTest extends TestCase
 {
@@ -13,6 +14,15 @@ class DivisionTest extends TestCase
         $division->setOperands([100, 2]);
 
         $this->assertEquals(50, $division->calculate());
+    }
+
+    /** @test */
+    public function no_operands_given_throws_exception_when_calculating()
+    {
+        $this->expectException(NoOperandsException::class);
+
+        $addition = new Division();
+        $addition->calculate();
     }
 
     /** @test */
