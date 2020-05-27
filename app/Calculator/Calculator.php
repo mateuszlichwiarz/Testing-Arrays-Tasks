@@ -29,13 +29,9 @@ class Calculator
     {
         if(count($this->operations) > 1)
         {
-            $result = null;
-            foreach($this->operations as $operation)
-            {
-                $result[] = $operation->calculate();
-            }
-
-            return $result;
+            return array_map(function($operation){
+                return $operation->calculate();
+            }, $this->operations);
         }
         return $this->operations[0]->calculate();
     }
