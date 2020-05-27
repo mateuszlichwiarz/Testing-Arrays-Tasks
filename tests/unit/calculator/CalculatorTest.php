@@ -63,6 +63,6 @@ class CalculatorTest extends TestCase
         $calculator = new Calculator();
         $calculator->setOperations([$addition, 'cats', 'dogs']);
 
-        $this->assertCount(2, $calculator->getOperations());
+        $this->assertCount(1, $calculator->getOperations());
     }
 }
