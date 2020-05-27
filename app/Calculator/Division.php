@@ -1,0 +1,8 @@
+<?php
+
+namespace App\Calculator;
+
+class Division
+{
+    
+}
