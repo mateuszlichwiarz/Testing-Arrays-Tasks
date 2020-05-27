@@ -17,7 +17,6 @@ class Calculator
             return $operation instanceof OperationInterface;
         });
         
-
         $this->operations = array_merge($this->operations, $filteredOperations);
     }
     public function getOperations()

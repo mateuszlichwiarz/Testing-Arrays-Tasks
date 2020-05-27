@@ -65,4 +65,16 @@ class CalculatorTest extends TestCase
 
         $this->assertCount(1, $calculator->getOperations());
     }
+
+    /** @test */
+    public function can_calculate_result()
+    {
+        $addition = new Addition();
+        $addition->setOperands([5, 10]);
+
+        $calculator = new Calculator();
+        $calculator->setOperation($addition);
+
+        $this->assertEquals(15, $calculator->calculate());
+    }
 }
