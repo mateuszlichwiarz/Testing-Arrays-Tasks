@@ -88,13 +88,12 @@ class CalculatorTest extends TestCase
         $division->setOperands([10, 5]);
 
         $calculator = new Calculator();
-        $calculator->setOperations($addition, $division);
+        $calculator->setOperations([$addition, $division]);
 
         // [15,2]
 
         $this->assertIsArray($calculator->calculate());
         $this->assertEquals(15, $calculator->calculate()[0]);
         $this->assertEquals(2, $calculator->calculate()[1]);
-
     }
 }
