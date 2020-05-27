@@ -14,12 +14,7 @@ class Calculator
     public function setOperations(array $operations)
     {
         $filteredOperations = array_filter($operations, function($operation){
-            if(!$operation instanceof OperationInterface)
-            {
-                return false;
-            }
-
-            return true;
+            return $operation instanceof OperationInterface;
         });
         
 
