@@ -17,6 +17,6 @@ class CalculatorTest extends TestCase
         $calculator = new Calculator();
         $calculator->setOperation($addition);
 
-        $this->assertEqual(1, $calcualtor->getOperations());
+        $this->assertCount(1, $calculator->getOperations());
     }
 }
