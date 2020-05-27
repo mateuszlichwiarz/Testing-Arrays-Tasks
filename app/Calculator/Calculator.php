@@ -13,13 +13,17 @@ class Calculator
 
     public function setOperations(array $operations)
     {
-        foreach($operations as $index=>$operation)
-        {
-            if(!$operation instanceof OperationInterface){
-                unset($operations[$index]);
+        $filteredOperations = array_filter($operations, function($operation){
+            if(!$operation instanceof OperationInterface)
+            {
+                return false;
             }
-        }
-        $this->operations = array_merge($this->operations, $operations);
+
+            return true;
+        });
+        
+
+        $this->operations = array_merge($this->operations, $filteredOperations);
     }
     public function getOperations()
     {
