@@ -19,8 +19,14 @@ class Calculator
         
         $this->operations = array_merge($this->operations, $filteredOperations);
     }
+
     public function getOperations()
     {
         return $this->operations;
+    }
+
+    public function calculate()
+    {
+        return $this->operations[0]->calculate();
     }
 }
