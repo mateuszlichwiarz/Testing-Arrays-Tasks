@@ -1,8 +1,14 @@
 <?php
 
+$numbers = [4, 4, 10, 1, 52, 89];
 
-$files = ['img12.png', 'img10.png', 'img2.png', 'img1,png'];
+usort($numbers, function($first, $second) {
+    if($first === $second)
+    {
+        return 0;
+    }
 
-natsort($files);
+    return($first > $second) ? 1 : -1;
+});
 
-var_dump($files);
+var_dump($numbers);
