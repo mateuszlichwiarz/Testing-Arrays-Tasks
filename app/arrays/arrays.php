@@ -1,7 +1,9 @@
 <?php
 
-$file = ['img12.png', 'img10.png', 'img2.png', 'img1.png'];
+$names = ['alex', 'mathew', 'tabby', 'ashley'];
+$numbers = [1,2,3,4];
 
-array_multisort($file, SORT_ASC, SORT_NATURAL);
+array_multisort($names, $numbers);
 
-var_dump($file);
+var_dump($names);
+var_dump($numbers);
