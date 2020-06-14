@@ -1,8 +1,8 @@
-<?php declare(strict_types=1);
+<?php
 
 namespace App\run;
 
-class run
+class Run
 {
     private $string;
 
