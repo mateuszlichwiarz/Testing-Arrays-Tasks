@@ -9,8 +9,6 @@ class MinionTest extends TestCase
 {
     public function testTrueAssertsToTrue()
     {
-        $obj = new Minion();
-
         $this->assertTrue(true);
     }
 }

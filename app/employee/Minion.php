@@ -11,5 +11,3 @@ class Minion extends Employee
         print "{$this->name}: Spakuje manatki\n";
     }
 }
-
-$obj = new Minion;
