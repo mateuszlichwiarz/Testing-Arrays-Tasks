@@ -4,10 +4,10 @@ namespace App\employee;
 
 use App\employee\Employee;
 
-class Minion extends Employee
+class CluedUp extends Employee
 {
     public function fire()
     {
-        print "{$this->name}: I will pack the bags\n";
+        print "{$this->name}: I will call to lawyer!\n";
     }
 }
