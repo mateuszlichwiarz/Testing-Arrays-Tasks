@@ -8,9 +8,9 @@ class NastyBoss
 {
     private $employees = [];
 
-    public function addEmployee(string $employeeName)
+    public function addEmployee(Employee $employee)
     {
-        $this->employees[] = new Minion($employeeName);
+        $this->employees[] = $employee;
     }
 
     function projectFails()

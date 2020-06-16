@@ -10,7 +10,7 @@ class NastyBossTest extends TestCase
     public function testTrueAssertsToTrue()
     {
         $boss = new NastyBoss();
-        $boss->addEmployee("Mateusz");
+        $boss->addEmployee(new Minion("Mateusz"));
         $boss->projectFails();
         $this->assertTrue(true);
     }
