@@ -6,7 +6,7 @@ use App\employee\Employee;
 
 //require_once 'Employee.php';
 
-class CluedUp extends Employee
+class WellConnected extends Employee
 {
     public function fire()
     {
