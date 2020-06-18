@@ -13,9 +13,5 @@ use App\employee\CluedUp;
 //require_once 'employee/CluedUp.php';
 
 $boss = new NastyBoss();
-$boss->addEmployee(new Minion("Mateusz"));
-$boss->addEmployee(new CluedUp("Arkadiusz"));
-$boss->addEmployee(new CluedUp("Pawel"));
-$boss->addEmployee(new Minion("Piotr"));
-$boss->addEmployee(new Minion("Kamil"));
+$boss->addEmployee(emplyee::recruit("Mateusz"));
 $boss->projectFails();
