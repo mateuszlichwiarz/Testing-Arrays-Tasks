@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Employee;
+namespace App\employee;
 
-use App\employee\Minion;
+//use App\employee\Minion;
+
 
 class NastyBoss
 {

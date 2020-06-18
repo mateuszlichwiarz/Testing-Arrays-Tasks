@@ -29,8 +29,11 @@ class NastyBossTest extends TestCase
         $boss = new NastyBoss();
         $boss->addEmployee(new Minion("Mateusz"));
         $boss->addEmployee(new CluedUp("Arkadiusz"));
+        $boss->addEmployee(new CluedUp("Pawel"));
+        $boss->addEmployee(new Minion("Piotr"));
+        $boss->addEmployee(new Minion("Kamil"));
         $boss->projectFails();
-        
+
         $this->assertTrue(true);
     } 
 }
