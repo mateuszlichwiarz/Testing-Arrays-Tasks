@@ -4,8 +4,6 @@ namespace App\employee;
 
 use App\employee\Employee;
 
-//require_once 'Employee.php';
-
 class Minion extends Employee
 {
     public function fire()

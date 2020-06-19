@@ -2,9 +2,6 @@
 
 namespace App\employee;
 
-//use App\employee\Minion;
-
-
 class NastyBoss
 {
     private $employees = [];
