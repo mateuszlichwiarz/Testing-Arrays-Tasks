@@ -4,6 +4,15 @@ namespace App;
 
 require_once '../vendor/autoload.php';
 
+use App\appointment\CommsManager;
+
+$man = new CommsManager(CommsManager::MEGA);
+print (get_class($man->getApptEncoder())) . "\n";
+
+$man = new CommsManager(CommsManager::BLOGGS);
+print (get_class($man->getApptEncoder())) . "\n";
+
+
 //use App\preferences\Preferences;
 
 //use App\employee\NastyBoss;
