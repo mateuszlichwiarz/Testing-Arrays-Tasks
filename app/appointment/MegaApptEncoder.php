@@ -2,6 +2,8 @@
 
 namespace App\appointment;
 
+use App\appointment\ApptEncoder;
+
 class MegaApptEncoder extends ApptEncoder
 {
     public function encode(): string

@@ -2,6 +2,10 @@
 
 namespace App\appointment;
 
+use App\appointment\ApptEncoder;
+use App\appointment\BloggsApptEncoder;
+use App\appointment\MegaApptEncoder;
+
 class CommsManager
 {
     const  BLOGGS = 1;
