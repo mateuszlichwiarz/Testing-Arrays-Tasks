@@ -1,6 +1,6 @@
 <?php
 
-namespace App\apointment;
+namespace App\appointment;
 
 use App\appointment\ApptEncoder;
 use App\appointment\BloggsApptEncoder;
