@@ -9,9 +9,16 @@ use App\appointment\CommsManager;
 
 class BloggsCommManager extends CommsManager
 {
-    public function getApptEncoder(): ApptEncoder
+    public function make(int $flag_int): Encoder
     {
-        return new BloggsApptEncoder();
+        switch($flag_int){
+            case self::APPT:
+                return new BloggsApptEncoder();
+            case self::CONTACT:
+                return new BloggsContactEncoder();
+            case self::TTD:
+                return new BloggsTtdEncoder();
+        }
     }
 
     public function getHeaderText(): string
