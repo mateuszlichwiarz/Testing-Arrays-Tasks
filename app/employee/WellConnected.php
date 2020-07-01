@@ -8,6 +8,6 @@ class WellConnected extends Employee
 {
     public function fire()
     {
-        print "{$this->name}: I will call to my dad!\n";
+        print "{$this->name}: I will callaa to my dad!\n";
     }
 }
